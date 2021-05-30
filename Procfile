@@ -1,1 +1,1 @@
-web: gunicorn connectfour.wsgi
+web: daphne connectfour.asgi
