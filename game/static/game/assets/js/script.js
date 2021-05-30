@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var fireworks = document.getElementsByClassName("pyro")[0];
     fireworks.style.display = "none";
 
-    socket = new WebSocket('ws://localhost:8000/ws/game/');
+    socket = new WebSocket('ws://sconfour.herokuapp.com/ws/game/');
     socket.onopen = function() {
 
     };
