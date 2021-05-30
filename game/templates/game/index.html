@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Connect Four</title>
+<link rel="stylesheet" href="{% static 'game/assets/css/styles.css' %}">
+</head>
+<body>
+
+    <div class="pyro">
+        <div class="before"></div>
+        <div class="after"></div>
+    </div>
+
+    <div class="container">
+
+        
+        <input class="cinput" type="text" id="roomName" name="roomName" placeholder="Room Name...">
+        <button class="cbutton" id="createRoomButton" onclick="createRoom()">Create Room</button>
+        <button class="cbutton" id="joinRoomButton" onclick="joinRoom()">Join Room</button>
+        <button class="cbutton" onclick="sResetBoard()">Reset Board</button>
+        <h3 id="currentRoom"></h3>
+        <h3 id="currentColor"></h3>
+
+
+
+        <div class="board-root">
+            
+        </div>
+
+    </div>
+
+<script src="{% static 'game/assets/js/script.js' %}"></script>
+</body>
+</html>
