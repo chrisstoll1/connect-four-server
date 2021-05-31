@@ -206,11 +206,11 @@ class WSConsumer(AsyncWebsocketConsumer):
         for index in indexes:
             board[index]["winnerSquare"] = True
         roomObject.boxes = json.dumps(board)
+        roomObject.winner = True
         await database_sync_to_async(roomObject.save)()
         await self.sendGroupMessage(roomObject.roomName, "update", roomObject.boxes)
         await self.sendGroupMessage(roomObject.roomName, "gameWon", "yay!")
         
-
     async def generateNewBoard(self):
         newBoard = []
         columnCounter = 0
